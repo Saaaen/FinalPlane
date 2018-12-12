@@ -57,7 +57,7 @@ public class game extends View {
         Var.bullet = BitmapFactory.decodeResource(getResources(), R.mipmap.zd);
         Var.Background=BitmapFactory.decodeResource(getResources(), R.mipmap.background);
 
-        new Thread(new re()).start();
+        new Thread(new play()).start();
         new Thread(new loadEnemy()).start();
     }
     
@@ -84,7 +84,7 @@ public class game extends View {
         g.drawText("Kills："+Var.kills,0,Var.h-100,p);
         g.drawText("HP："+Var.myHp,0,Var.h-200,p);
     }
-    private class re implements Runnable {
+    private class play implements Runnable {
         @Override
         public void run() {
             while(true){
