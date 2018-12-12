@@ -1,19 +1,16 @@
 package com.example.a16784.mp6plane;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.Toast;
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-
 
 public class MainActivity extends AppCompatActivity {
     private long time;
+    private static Context mContext;
+    private static MainActivity mainActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
         setContentView(new game(this));
+
+        mContext = getApplication();
+        mainActivity = this;
     }
 
 
@@ -38,5 +38,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+
+    public static void 玩儿完了() {
+        Main2Activity.showScore = true;
+        mainActivity.finish();
     }
 }

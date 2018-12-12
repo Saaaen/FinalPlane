@@ -1,14 +1,12 @@
 package com.example.a16784.mp6plane;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.v7.app.AlertDialog;
 import android.view.MotionEvent;
 import android.view.View;
 import java.util.Vector;
@@ -226,7 +224,9 @@ class Varplane extends plane implements Runnable{
                         break;
                     }
                     if (Var.myHp <= 0) {
-                        android.os.Process.killProcess(android.os.Process.myPid());
+                        Main2Activity.score = Var.kills;
+                        MainActivity.玩儿完了();
+//                        android.os.Process.killProcess(android.os.Process.myPid());
                     }
                 }
             } catch (Exception e) {
