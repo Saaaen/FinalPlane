@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    public static void 玩儿完了() {
+    public static void dead() {
         Main2Activity.showScore = true;
         mainActivity.finish();
     }

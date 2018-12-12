@@ -225,7 +225,7 @@ class Varplane extends plane implements Runnable{
                     }
                     if (Var.myHp <= 0) {
                         Main2Activity.score = Var.kills;
-                        MainActivity.玩儿完了();
+                        MainActivity.dead();
 //                        android.os.Process.killProcess(android.os.Process.myPid());
                     }
                 }

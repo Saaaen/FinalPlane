@@ -38,7 +38,8 @@ public class Main2Activity extends AppCompatActivity {
                 scoreView.setVisibility(View.INVISIBLE);
                 Var.kills = 0;
                 Var.myHp = 10;
-                Var.list = new Vector<>();
+                Var.list = new Vector<plane>();
+                Var.Elist = new Vector<plane>();
                 Intent intent = new Intent(Main2Activity.this, MainActivity.class);
                 startActivity(intent);
             }
