@@ -315,7 +315,9 @@ class bullet extends plane implements Runnable{
                 e.printStackTrace();
                 break;
             }
-            if(flag || r.top+h<=0)break;
+            if(flag || r.top+h<=0) {
+                break;
+            }
         }
         Var.list.remove(this);
     }
